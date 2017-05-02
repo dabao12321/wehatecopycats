@@ -1,2 +1,3 @@
 # wehatecopycats
-Lab3: Plagiarism 
+Lab3: Plagiarism
+Amanda Li, Herbie Turner

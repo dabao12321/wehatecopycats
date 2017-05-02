@@ -1,3 +1,10 @@
+/* Project Title: DocXReader class
+* Description: Capable of taking in a .docx file and reading the document.xml file
+*
+* Created by: Amanda Li, Herbie Turner
+* Date: 5/1/17
+*/
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.zip.ZipEntry;
@@ -5,7 +12,7 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 import java.nio.charset.Charset;
 
-public class DocXReader {
+public class DocXReader implements Reader {
   private String docxFilename;
   private static final int BUFFER_SIZE = 8192;
 
@@ -13,6 +20,7 @@ public class DocXReader {
     docxFilename = s;
   }
 
+  // Opens and reads a docx file, modified version of ReadZip's method
   public String readFile() {
     String docText = "";
     try {
@@ -35,6 +43,7 @@ public class DocXReader {
     return docText;
   }
 
+  // Reads in the file contents
   private String readInFileContents(ZipInputStream zis) throws IOException{
       String document = "";
 
