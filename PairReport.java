@@ -76,6 +76,7 @@ public class PairReport implements Comparable<PairReport> {
     String output = "File 1: " + file1 + "\nFile2: " + file2 + "\nSimilarity score: "
                                + getSimilarityScore() + "\nLength of CList: " + getCList().size()
                                + "\nLongest similar substring: " + getCList().get(0);
+    return output;
   }
 
 }
