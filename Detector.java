@@ -22,6 +22,9 @@ public class Detector{
   public ArrayList<String> getCList(){
     return cList;
   }
+  public double getSimilarityScore(){
+    return similarityScore;
+  }
   private double setSimilarityScore(){
     return scoreHelper(string1, string2)/(string1.length() + string2.length());
   }
