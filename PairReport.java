@@ -21,7 +21,9 @@ public class PairReport implements Comparable<PairReport> {
     file2 = s2;
     cleanerFile1 = cf1;
     cleanerFile2 = cf2;
-    detector = new Detector(file1, file2);
+    DocXReader one = new DocXReader(file1);
+    DocXReader two = new DocXReader(file2);
+    detector = new Detector(Cleaner.cleanFull(one.readFile()), Cleaner.cleanFull(two.readFile()));
   }
 
   public String getf1() {
